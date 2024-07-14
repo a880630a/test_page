@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 
 import Home from "./pages/Home";
 import SlowComponent from "./pages/slowComponent/slowComponent";
@@ -9,7 +9,7 @@ import SlowComponentFixed from "./pages/slowComponent/slowComponentFixed";
 function App() {
     return (
         <>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/slow-component" element={<SlowComponent />} />
@@ -22,7 +22,7 @@ function App() {
                         element={<SlowComponentFixed />}
                     />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </>
     );
 }
